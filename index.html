@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="boostrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/app.css">
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+        </script>
+
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script defer src="js/header_type.js"></script>
+
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script defer src="js/app_produit.js"></script>
+    <script defer src="./js/formulaire.js"></script>
+
+</head>
+
+<body>
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixe">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled">Disabled</a>
+                    </li>
+                </ul>
+                <button class="btn btn-light voir_panier position-relative" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                    Voir mon panier
+                    <span
+                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger nbreArticle">
+
+                    </span>
+                </button>
+            </div>
+        </div>
+    </nav> -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">JOYEUX NOËL</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="navbar-brand" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="navbar-brand" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="navbar-brand" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="navbar-brand dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dropdown link
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Act</a></li>
+                            <li><a class="dropdown-item" href="#">Another </a></li>
+                            <li><a class="dropdown-item" href="#">Something els</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <button class="btn btn-light voir_panier position-relative" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" id="b1">
+                    Voir mon panier
+                    <span class="position-absolute top-0 start-100 translate-middle ">
+                        <!-- badge rounded-pill bg-danger nbreArticle -->
+                    </span>
+                </button>
+            </div>
+            <div>
+                <a class="btn btn-primary navbar-toggler" data-bs-toggle="offcanvas" href="#offcanvasExample"
+                    data-bs-target="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                    Votre Panier
+                </a>
+                <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExamples" role="button"
+                    aria-controls="offcanvasExample">
+                    Link with href
+                </a>
+                <!-- <button id="b1">slideUp()</button> -->
+                <button id="b2">slideDown()</button>
+                <button id="b3">slideToggle()</button>
+            </div>
+        </div>
+    </nav>
+    <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasExamples"
+        aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Paiement</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="container">
+                <form class="row g-3">
+                    <div class="col-md-6">
+                        <label for="nom" class="form-label">Nom</label>
+                        <input type="text" class="form-control" id="nom" placeholder="Saisir votre nom">
+                        <div id="nomError"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="prenom" class="form-label">Prénom</label>
+                        <input type="text" class="form-control" id="prenom" placeholder="Saisir votre Prenom">
+                        <div id="prenomError"></div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Saisir votre Email">
+                        <div id="emailError"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="Tél" class="form-label">Tél</label>
+                        <input type="text" class="form-control" id="tel" placeholder="Saisir votre Tél">
+                        <div id="telError"></div>
+                    </div>
+                    <div class="col-12">
+                        <label for="floatingTextarea2">Comments</label>
+                        <textarea maxLength=200 class="form-control" id="message" placeholder="Saisir votre commentaire"
+                            style="height: 100px"></textarea>
+                        <p id="compteur">0 mots | 0 Caractere / 200</p>
+                        <div id="messageError"></div>
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary btn_envoie">Sign in</button>
+                    </div>
+                </form>
+            </div>
+            ...........2.............
+        </div>
+    </div>
+
+    <header>
+        <div STYLE="position:absolute; top: 353px; left:515px" id="app"></div>
+        <div id="x"></div>
+    </header>
+    <h1>Titre principal</h1>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Mon panier</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div id="offcanvas-panier">
+                <img src="./img/depositphotos_240958506-free-stock-photo-miniature-shopping-cart-red-shopping.jpg"
+                    alt="" style="width: 400px; height: 350px;">
+                Votre panier est tristement vide en ce moment
+            </div>
+            <ul class="list-group" id="pan">
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample2" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Valider ma commande</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div>
+                Veuillez rentrer vos informations dans les champs de saisi ci-dessous.
+            </div>
+                <!-- <section class="contener">
+                <div class="container text-center" style="grid: inherit">
+                    <div class="row gap-3">
+                        <div class="card col" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of
+                                    the card's content.</p>
+                                <strong class="prixapres">75€</strong>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                        <div class="card col" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of
+                                    the card's content.</p>
+                                <strong class="prixapres">75€</strong>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                        <div class="card col" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of
+                                    the card's content.</p>
+                                <strong class="prixapres">75€</strong>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                        <div class="card col" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of
+                                    the card's content.</p>
+                                <strong class="prixapres">75€</strong><br>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="container text-center" style="grid: inherit">
+                    <div class="row gap-3">
+                        <div class="card col" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of
+                                    the card's content.</p>
+                                <strong class="prixapres">75€</strong>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                        <div class="card col" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of
+                                    the card's content.</p>
+                                <strong class="prixapres">75€</strong>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                        <div class="card col" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of
+                                    the card's content.</p>
+                                <strong class="prixapres">75€</strong>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                        <div class="card col" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of
+                                    the card's content.</p>
+                                <strong class="prixapres">75€</strong><br>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+            <footer>
+                
+            </footer>
+
+</body>
+
+</html>

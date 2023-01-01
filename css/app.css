@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+
+header{
+    background-image:url(ball-2.png);
+    /* background-repeat: no-repeat; */
+    text-align: center;
+    
+    
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    height: 674px;
+    width: 100%;
+
+}
+
+.contener {
+    background: #2e85dd;
+    margin: auto;
+    /* padding-bottom: 5%; */
+}
