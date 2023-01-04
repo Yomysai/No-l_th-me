@@ -1,3 +1,4 @@
+
 var compteur = 0;
 $('.btn_envoie').on("click", function(e) {
 	compteur++;
@@ -111,3 +112,12 @@ tous_les_inputs.each(function (index) {
 		verif()
 	})
 })
+// function calcul() {
+//     var qte = document.querySelector('#qte').value;
+//     var prix = document.querySelector('#prix').value;
+    
+//     var total = qte*prix;
+    
+//     document.querySelector('#total').value = total;
+// }
+// document.querySelector('#qte').addEventListener("keyup", calcul)

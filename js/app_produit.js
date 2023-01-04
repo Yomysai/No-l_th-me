@@ -48,38 +48,68 @@ var produit = [
       prix: 22
     }
   ]; 
-  // let container = '<div class="contai  ner">';
-  // let ligne = '<div class="row justify-content-around mt-4" id="produit">';
-  // let card ="";
-  // /* Affichages des prods dans HTML */
+
+   let container = '<div class="container">';
+  let ligne = '<div class="row justify-content-around mt-4" id="produit">';
+  let card ="";
+  /* Affichages des prods dans HTML */
+  $.each(produit, function (index, prod) {
+
+    card += '<div class="mes_cards card  text-center" style="width: 18rem;"><img src="'+ prod.image +'" class="card-img-top"><div class="card-body"><h5 class="card-title">'+prod.nom+'</h5><p class="card-text">'+prod.descrption+'</p><ul class="list-group list-group-flush"><li class="list-group-item">Prix: '+prod.prix +' € </li></ul><input type="button" class="btn btn-info" value="Ajouter au panier" id="'+index+'"></div></div>'
+    
+  })
+
+  ligne += card
+  container += ligne + "</div>";
+
+  $("body").append(container);
   
-  // $.each(produit, function (index, prod) {
+  
+  // cree un tableau vide pour mettre les produits ajoutés dans le panier
+  let panier = [];
+// click sur le bouton "Ajout panier"
+$('input[type="button"]').click(function () {
 
-  //   card += '<div class="mes_cards card  text-center" style="width: 18rem;"><img src="'+ prod.image +'" class="card-img-top"><div class="card-body"><h5 class="card-title">'+prod.nom+'</h5><p class="card-text">'+prod.descrption+'</p><ul class="list-group list-group-flush"><li class="list-group-item">Prix: '+prod.prix +' € </li></ul><input type="button" class="btn btn-info" value="Ajouter au panier" id="'+index+'"></div></div>'
+  alert('Le produit a été ajouté avec succès !')
+
+  //verifie si le produit existe dans le panier
+  var isExist = false;
+
+  var nomP = $(this).parent().children("h5").text();
+  console.log('isExist');
+  $.each(panier, function (index,valeur) {
+    //Si le produit exkste deja, j'incremente juste la quantite et recalcule le total
+    if (valeur.nom === nomP) {
+      isExist = true;
+      valeur.quantite ++;
+      valeur.prixtotal = valeur.quantite *  valeur.prix
+    }
+  })
+  //Ajout dans panier
+  let getId = $(this).attr('id');
+    if (!isExist) {
+
+      panier.push(produit[getId]);
+      panier[panier.length-1].quantite = 1
+      panier[panier.length-1].prixtotal = produit[getId].prix * panier[panier.length-1].quantite
+    }})
+
+  // patie essaie********************** 
+  
+  
+  // $("body");
+  // $(document).ready(function(){
+  //   //Replie le titre en 400ms lors du clic sur #b1
+  //   $("#b1").click(function(){
+  //       $("h1").slideUp();
+  //   });
     
-  // })
+  //   //Déplie le titre en 2 secondes lors du clic sur #b2
+  //   $("#b2").click(function(){
+  //       $("h1").slideDown(2000);
+  //   });
 
-  // ligne += card
-  // container += ligne + "</div>";
-  let container = '<div>';
-  const image = document.createElement('img')
-  image.src  = 'images/product-12.jpg'
-  document.querySelector('.container').appendChild(image)
-
-  $("#x");
-  $(document).ready(function(){
-    //Replie le titre en 400ms lors du clic sur #b1
-    $("#b1").click(function(){
-        $("h1").slideUp();
-    });
-    
-    //Déplie le titre en 2 secondes lors du clic sur #b2
-    $("#b2").click(function(){
-        $("h1").slideDown(2000);
-    });
-
-    //Déplie le titre s'il est plié ou le plie s'il est déplié
-    $("#b3").click(function(){
-        $("h1").slideToggle(2000);
-    });
-});
+  //   //Déplie le titre s'il est plié ou le plie s'il est déplié
+  //   $("#b3").click(function(){
+  //       $("h1").slideToggle(2000);
+  //   });

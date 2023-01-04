@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script  defer src="js/formulaire.js"></script>
+</head>
+<body>
+    <div class="container">
+        <form class="row g-3">
+            <div class="col-md-6">
+              <label for="nom" class="form-label">Nom</label>
+              <input type="text" class="form-control" id="nom">
+              <div id="nomError"></div>
+            </div>
+            <div class="col-md-6">
+              <label for="prenom" class="form-label">Prénom</label>
+              <input type="text" class="form-control" id="prenom">
+              <div id="prenomError"></div>
+            </div>
+  
+            <div class="col-md-6">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email">
+              <div id="emailError"></div>
+            </div>
+            <div class="col-md-6">
+              <label for="Tél" class="form-label">Tél</label>
+              <input type="text" class="form-control" id="tel">
+              <div id="telError"></div>
+            </div>
+            <!-- <div class="col-12">
+                <label for="floatingTextarea2">Comments</label>
+                <textarea maxLength =200 class="form-control" placeholder="Leave a comment here" id="message" style="height: 100px"></textarea>
+                 <p id="compteur">0 mots | 0 Caractere / 200</p>
+                 <div id="messageError"></div>
+              </div>
+            <div class="col-12"> -->
+              <button type="submit" class="btn btn-primary btn_envoie"  onclick="finaliser()">Sign in</button>
+            </div>
+          </form>
+    </div>
+    <div>
+        Voici la liste de vos produits (vous pouvez augmenter la quantité si vous le souhaitez).
+    </div>
+    <br>
+    <div  class="row justify-content-end">
+        <div></div>
+    </div>
+            <div action="">
+                <label for="qte">quantité</label>
+                <input type="text" name="qte" id="qte" value="1">
+                <label for="prix">Prix</label>
+                <input type="text" name="prix" id="prix" value="150" disabled>
+                
+                <label for="">
+                    NET A PAYER: 
+                    <input type="text"  id="total" value="150" disabled>
+                </label>
+            </div>
+    
+</body>
+</html>
